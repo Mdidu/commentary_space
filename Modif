@@ -1,3 +1,8 @@
 Modification possible à faire
+Revoir/modifier les messages affiché via les echo (certains disparaitront probablement)
 Afficher des messages quand une action est faite ex: message supprimé, etc
 Modifier le code via de l'AJAX pour ne pas avoir de refresh
+
+
+A faire ou à abandonner :
+redirection au bout de x secondes
