@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    /*background: darkgoldenrod;*/
+    background: linear-gradient(to left, #30809d 0%, #24C6DC 100%, #9d5e5f 65%);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+}
+input, textarea {
+    margin: 10px;
+    background: #caffce;
+}
+#welcomeUser{
+    font-size: 1.6em;
+}
+#buttonUpdateDelete {
+    display: flex;
+}
+.submit {
+    cursor: pointer;
+    border-radius: 12px 0 12px 0;
+    border: none;
+    font: bold 1.1em Verdana;
+    padding: 8px 3px 8px 3px;
+    box-shadow: 1px 1px 3px #999;
+    background: linear-gradient(to right, #24C6DC 0%, #514A9D 51%, #24C6DC 100%);
+}
+.modified {
+    color: darkred;
+    margin-bottom: 15px;
+}
+.blocComment {
+    text-align: center;
+    border-top: 1px solid black;
+    width: 100%;
+    font-size: 1.4em;
+    color: darkslategrey;
+}
+.commentTXT, .commentPseudo {
+    font-weight: bold;
+    color: black;
+}
+.commentTXT{
+    font-size: 1.5em;
+}
+.commentPseudo{
+    font-style: italic;
+}
