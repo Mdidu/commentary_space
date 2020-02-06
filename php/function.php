@@ -8,7 +8,6 @@ function search_user($pseudo){
 
     while($row = $sql->fetch()){
         if($row['pseudo'] == $pseudo){
-
             $id = $row['id'];
             $sql->closeCursor();
 
@@ -153,7 +152,6 @@ function checkLog($pseudo, $password){
     while($row = $sql->fetch()){
         if ($pseudo === $row['pseudo'] && password_verify($password, $row['password'])) {
             echo 'Le mot de passe est valide !';
-//            $_SESSION['id'] = intval($row['id']);
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['group_id'] = $row['group_id'];
         } else {
