@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "connect.php";
 include "../htmlBase/header.php";
 $_SESSION['page'] = "login";
 ?>
