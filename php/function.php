@@ -63,7 +63,7 @@ function addComment($pseudo, $comment){
         $sql->closeCursor();
         header('location: comment_display.php');
     } else {
-        echo "Vous n'êtes pas connecté ! Vous allez être redirigé dans X secondes";
+//        echo "Vous n'êtes pas connecté ! Vous allez être redirigé dans X secondes";
         header('location: index.html');
     }
 }
@@ -86,7 +86,7 @@ function updateComment($commentaryId, $pseudo, $comment){
         $sql->closeCursor();
         header('location: comment_display.php');
     }else {
-        echo "Vous n'êtes pas connecté ! Vous allez être redirigé dans X secondes";
+//        echo "Vous n'êtes pas connecté ! Vous allez être redirigé dans X secondes";
         header('location: index.html');
     }
 }
@@ -136,9 +136,9 @@ function pagination($limit, $page){
 //        json_encode($row, true);
         }
         $sql->closeCursor();
-    }else {
+    }/*else {
         echo "Le numéro de page n'est pas un entier !";
-    }
+    }*/
 }
 //verify that the password and pseudo exists in the database
 function checkLog($pseudo, $password){
@@ -151,14 +151,15 @@ function checkLog($pseudo, $password){
 
     while($row = $sql->fetch()){
         if ($pseudo === $row['pseudo'] && password_verify($password, $row['password'])) {
-            echo 'Le mot de passe est valide !';
+//            echo 'Le mot de passe est valide !';
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['group_id'] = $row['group_id'];
-        } else {
+        } /*else {
             echo 'Le pseudo ou le mot de passe est incorrect !';
-        }
+        }*/
     }
     $sql->closeCursor();
+
     if(isset($_SESSION['pseudo'])){
         header('location: comment.php');
     }else {
